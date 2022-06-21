@@ -1,0 +1,30 @@
+name: Project Packages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Project
+        run: |
+          bash -x ./scripts/setup-project.sh
+
+      - name: Clean Up Extra Files
+        run: |
+          find . -type d -name '.git' | xargs rm -rf
+
+      - name: Make Source Tarball
+        run: |
+          mkdir iotc-generic-c-sdk-src/
+          tar -zcf iotc-generic-c-sdk-src/iotc-generic-c-sdk-src.tar.gz --transform 's,^,iotc-generic-c-sdk/,' --exclude='./iotc-generic-c-sdk-src' .
+
+      #use wildcards so that directory path is preserved.
+      - name: Publish Source Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: iotc-generic-c-sdk
+          path: iotc-generic-c-sdk-src

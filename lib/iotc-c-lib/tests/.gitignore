@@ -1,0 +1,10 @@
+cmake-build-debug
+*.cmake
+CMakeCache.txt
+*.cbp
+
+# test binaries
+test-*
+
+# libs cloned for testing purposes
+cJSON

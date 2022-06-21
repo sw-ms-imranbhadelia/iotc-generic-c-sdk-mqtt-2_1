@@ -1,0 +1,17 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\iotc-generic-c-sdk",
+    "\\iotc-generic-c-sdk\\curl-http-impl",
+    "\\iotc-generic-c-sdk\\curl-http-impl\\src",
+    "\\iotc-generic-c-sdk\\src",
+    "\\lib",
+    "\\lib\\iotc-c-lib",
+    "\\lib\\iotc-c-lib\\src",
+    "\\samples",
+    "\\samples\\basic-sample",
+    "\\samples\\basic-sample\\config"
+  ],
+  "SelectedNode": "\\iotc-generic-c-sdk\\src\\iotconnect.c",
+  "PreviewInSolutionExplorer": false
+}
